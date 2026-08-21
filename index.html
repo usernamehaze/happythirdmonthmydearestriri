@@ -54,10 +54,15 @@
   .floaty{
     position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden;
   }
-  .floaty span{
-    position:absolute; bottom:-40px; color:#ff9db3; opacity:0.5;
-    animation:rise linear infinite;
-    font-size:1.2rem;
+.floaty span{
+position:absolute; bottom:-40px; opacity:0.7;
+animation:rise linear infinite;
+font-size:0.9rem;
+background:linear-gradient(145deg,#ffd6e2,#ff9db3);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+filter:drop-shadow(0 2px 3px rgba(255,140,170,0.5));
   }
   @keyframes rise{
     to{ transform:translateY(-110vh) rotate(30deg); opacity:0; }
@@ -558,18 +563,6 @@
   I will always, always love you<br>no matter what.
 </footer>
 
-<div class="howto">
-  <b>The notepad is shared:</b> whatever she types (or you type) autosaves a moment after typing stops, and both of
-  you will see the same entries — it checks for updates every few seconds, so if she adds something on her end, it'll
-  show up on yours without needing to refresh. Since it's shared, anyone who has the link can see and edit these notes —
-  there's no separate private view. This only works if the page is opened through Claude's artifact viewer (the link
-  you share); if it's downloaded and opened as a plain local file instead, typing still works but nothing is saved
-  or shared between devices.<br><br>
-  <b>Music:</b> the Spotify player above is a real embed of "Tadhana" by Up Dharma Down — it plays a 30-second preview
-  directly, no extra setup needed.<br><br>
-  Delete this note once everything's in place.
-</div>
-
 <script>
   // floating hearts ambience
   const floaty = document.getElementById('floaty');
@@ -698,7 +691,12 @@
     "you make me want to be better",
     "it's you, it will always be",
     "kindest person I know",
-    "you remember the small things"
+    "you remember the small things",
+    "you are my good girl, always",
+    "you are my wife",
+    "your voice calms my mind",
+    "i will always choose you"
+  
   ];
   const svgNS = "http://www.w3.org/2000/svg";
   const slicesGroup = document.getElementById('wheelSlices');
